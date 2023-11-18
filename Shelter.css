@@ -1,0 +1,365 @@
+*{
+    padding: 0; 
+    margin:0; 
+    box-sizing: border-box;
+    font-family: 'Times New Roman';
+}
+
+body{
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	margin: 0;
+  	padding: 0;
+      background-color: rgb(254, 253, 252);
+}
+header{
+	width: 100vw;
+	height:auto;
+	background:white;
+	background-size: cover;
+	position: relative;
+	background-attachment: fixed;
+}
+nav{
+	width: 100%;
+	height:80px;
+	background: white;
+	color: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 80px;
+	position:fixed;
+	top:0;
+	background:white;
+	z-index: 1;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.logo{
+	font-family: sans-serif;
+	font-size:2.5em;
+    cursor: pointer;
+}
+.logo span{
+	color: #e74c3c;
+}
+.menu a{
+	text-decoration: none;
+	color: black;
+	font-size:20px;
+	padding: 10px 20px;
+	font-family: sans-serif;
+}
+.menu a:first-child{
+	color:black;
+    cursor: pointer;
+}
+.menu a:hover{
+	color: #e74c3c;
+	transition: 0.4s;
+}
+.icon i{
+	font-size:20px;
+}
+.icon i:hover{
+	color: #e74c3c;
+}
+.icon a{
+	padding:10px 20px;
+	background:#e74c3c;
+	color:white;
+	text-decoration: none;
+	margin-left:30px;
+	border-radius: 5px;  
+}
+.icon a:hover{
+	background: transparent;
+	border:1px solid #e74c3c;
+	color: black;
+	transition: 0.4s ease;
+}
+
+
+footer{
+	background: #262626;
+	color: white;
+	width: 100%;
+	padding: 50px 100px;
+	margin-top: 0px;
+}
+.f-contact{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top:3em;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.f-contact>div{
+	margin: 50px;
+}
+.f-contact p{
+	line-height:2em;
+	font-size: 20px;
+	color: grey;	
+	cursor: pointer;
+    cursor: pointer;
+}
+.f-contact p:hover{
+	color: white;
+}
+.f-contact i{
+	background: white;
+	color: black;
+	padding:10px;
+	font-size:16px;
+	margin: 20px 5px;
+	border-radius: 50%;
+	transition: .4s ease;
+}
+.f-contact i:hover{
+	background: transparent;
+	border:1px solid white;
+	color: white;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .popup-content {
+    background-color: #fff;
+    width: 400px;
+	height: 350px;
+    padding: 20px;
+    margin: 10% auto;
+    position: relative;
+	border-radius: 6px;
+	font-size: 20px;
+  }
+  .popup-content input{
+	width: 350px;
+	height: 40px;
+	border: 1.5px solid black;
+  }
+  .popup-content input:hover{
+	border: 1.5px solid gray;
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+  }
+.open-popup{
+	width: 80px;
+	height: 40px;
+	background-color: #e74c3c;
+	color: white;
+	font-size: 15px;
+	border: none;
+	border-radius: 4px;
+    cursor: pointer;
+}
+.s2{
+	text-align: center;
+	font-size: 30px;
+}
+.sub{
+	width: 80px;
+	height: 40px;
+	background-color: green;
+	color: white;
+	font-size: 15px;
+	border: none;
+	border-radius: 4px;	
+	margin-left: 140px;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+form{
+    padding:20px;
+    background-color: white;
+    border-radius: 8px;
+}
+div.mainf{
+    margin-top: 120px;
+    margin-left: 80px;
+    margin-bottom: 25px;
+    width: 1100px;
+    height: 80px;
+    box-shadow: 0 0 10px #262626;
+    border-radius: 6px;
+}
+.mainform{
+    display: flex;
+}
+.mainform select{
+    width: 350px;
+    height: 40px;
+    font-size: 20px;
+    border: 2px solid rgb(68, 68, 68);
+    border-radius: 4px;
+}
+.mainform select option{
+    padding: 50px;
+}
+.form-control{
+    margin-left: 0px;
+}
+.distr{
+    margin-left: 25px;
+}
+.bmainf{
+    margin-left: 25px;
+    width: 310px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.bmainf:hover{
+    background-color: #262626;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    width: 400px;
+	height: 350px;
+    padding: 20px;
+    margin: 10% auto;
+    position: relative;
+	border-radius: 6px;
+	font-size: 20px;
+  }
+  .popup-content input{
+	width: 350px;
+	height: 40px;
+	border: 1.5px solid black;
+  }
+  .popup-content input:hover{
+	border: 1.5px solid gray;
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+  }
+.open-popup{
+	width: 80px;
+	height: 40px;
+	background-color: #e74c3c;
+	color: white;
+	font-size: 15px;
+	border: none;
+	border-radius: 4px;
+}
+.s2{
+	text-align: center;
+	font-size: 30px;
+}
+.sub{
+	width: 80px;
+	height: 40px;
+	background-color: green;
+	color: white;
+	font-size: 15px;
+	border: none;
+	border-radius: 4px;	
+	margin-left: 140px;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+div.container1{
+    margin-left: 80px;
+}
+div.scard{
+    width: 345px;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0 0 15px gray;
+    margin-bottom: 25px;
+    margin: 10px;
+    display: inline-block;
+    zoom: 1;
+    background-color: white;
+}
+div.scard img{
+    width: 345px;
+    height: 345px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+div.sec2{
+    margin-left: 15px;
+}
+.bcontact{
+    margin-bottom: 15px;
+    width: 320px;
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    background-color: #e74c3c;
+    font-size: 20px;
+    cursor: pointer;
+}
+.bcontact:hover{
+    background-color: #da3421;
+    box-shadow: 0 0 10px black;
+}
+div.addshelter{
+    width: 1100px;
+    height: 40px;
+    text-align: center;
+    background-color: white;
+    margin-left: 80px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px gray;
+    line-height: 0.3;
+    cursor: pointer;
+}
+div.addshelter:hover{
+    box-shadow: 0 0 10px black;
+}
+.addsheltertext{
+    font-size: 25px;
+    color: #eb6657;
+    margin-top: 10px;
+}

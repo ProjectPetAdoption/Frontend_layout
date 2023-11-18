@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Stayform.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Pet Shelter and Care</title>
+</head>
+<body>
+    <header>
+		<nav>
+			<div class="logo" id="logo">
+				Adopt<span>Me</span>
+			</div>
+			<div class="menu">
+				<a href="#">Pets</a>
+				<a href="#">Pet Services</a>
+				<a href="#">About Us</a>
+                <a href="#">Join us</a>
+				<a href="#">Contact</a>
+                <a href="#">FAQs</a>
+            </div>
+
+            <button id="open-popup" class="open-popup">Login</button>
+            
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                  <span class="close" id="close-popup">&times;</span>
+                  <h2 class="s2">Sign In</h2>
+                  <br>
+                  <form>
+                    <label for="username">Username:</label>
+                    <input type="email" id="username" name="username" required placeholder="Enter Your Username"><br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter Password"><br>
+                    <br>
+                    <br>
+                    <button type="submit" class="sub">Submit</button>
+                  </form>
+                </div>
+              </div>
+		</nav>
+	</header>
+    <div id="nav-container"></div>
+    <div class="container9">
+        <h1>Pet Shelter and Care</h1>
+        <p>Provide shelter and care for dogs and cats for a short period of time.</p>
+        <form id="petForm">
+            <label for="phone">Name:</label>
+            <input type="text" id="name" name="phone">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="petType">Pet Type:</label>
+            <select id="petType" name="petType">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+            </select>
+
+            <label for="breed">Breed:</label>
+            <input type="text" id="breed" name="breed">
+
+            <label for="duration">Duration in Shelter (days):</label>
+            <input type="number" id="duration" name="duration">
+
+            <label for="disease">Any Disease:</label>
+            <input type="text" id="disease" name="disease">
+
+            <label for="weight">Weight (in kg):</label>
+            <input type="number" id="weight" name="weight">
+
+            <label for="additionalInfo">Additional Information:</label>
+            <textarea id="additionalInfo" name="additionalInfo" rows="4"></textarea>
+
+            <br>
+            <button type="submit" class="submitform">Submit</button>
+        </form>
+        <div id="thankYou" style="display: none;">
+            <p>Thank you! An agent will be in contact soon.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+	    <div class="f-contact" data-aos="zoom-in-up" data-aos-offset="200">
+		    <div>
+                <p><span class="sseven">
+                    Connect with us for
+                    any queries or
+                    support.
+                </span>
+                <br>
+                    We are dedicated to provide you with a hassle free adoption
+                    proceess 24X7. Our only goal is to provide you with a pawsitive
+                    experience all the way.</p>
+			    <i class="fa fa-whatsapp"></i>
+			    <i class="fa fa-instagram"></i>
+			    <i class="fa fa-telegram"></i>
+			    <i class="fa fa-twitter"></i>
+		    </div>
+
+		    <div>
+			    <h1>Contact</h1>
+			    <p>adoptme@gmail.com</p>
+			    <p>+91 9876543210</p>
+			    <p>Buliding No 123, Street xyz, Mumbai</p>
+		    </div>
+
+		    <div>
+			    <h1>Get Involved</h1>
+			    <p>Adopting Pets</p>
+			    <p>Shelter and Rescues</p>
+			    <p>As a Veterinarian</p>
+			    <p>As a Trainer</p>
+			    <p>As a Breeder</p>
+		    </div>
+	    </div>
+    </footer>
+    <script>
+        document.getElementById("open-popup").addEventListener("click", function() {
+        document.getElementById("popup").style.display = "block";
+        });
+    
+        document.getElementById("close-popup").addEventListener("click", function() {
+        document.getElementById("popup").style.display = "none";
+        });
+
+        document.getElementById("logo").addEventListener("click", function () {
+        window.location.href = "index.html";
+    });
+        </script>
+    <script>
+               // Load and insert the navigation using JavaScript
+               fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-container').innerHTML = data;
+            });
+
+        // Load and insert the footer using JavaScript
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+
+
+
+        const petForm = document.getElementById('petForm');
+        const thankYou = document.getElementById('thankYou');
+
+        petForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent form submission
+
+            // You can process the form data here if needed
+
+            // Show the thank you message
+            petForm.style.display = 'none';
+            thankYou.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

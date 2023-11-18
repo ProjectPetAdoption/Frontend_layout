@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Card</title>
+    <style>
+        .card {
+            display: flex;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .image {
+            flex: 1;
+        }
+
+        .details {
+            flex: 2;
+            padding-left: 20px;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="petCard"></div>
+    <script>
+        // Data to be filled in the card
+        const petDetails = {
+            name: "Fluffy",
+            breed: "Labrador Retriever",
+            age: 3,
+            gender: "Male",
+            location: "Your Location",
+            imageUrl: "https://via.placeholder.com/150" // Replace this with the actual image URL
+        };
+
+        // Function to create the card dynamically
+        function createPetCard(pet) {
+            const cardContainer = document.getElementById('petCard');
+
+            const card = document.createElement('div');
+            card.classList.add('card');
+
+            const imageDiv = document.createElement('div');
+            imageDiv.classList.add('image');
+            const petImage = document.createElement('img');
+            petImage.src = pet.imageUrl;
+            imageDiv.appendChild(petImage);
+
+            const detailsDiv = document.createElement('div');
+            detailsDiv.classList.add('details');
+            const detailsList = document.createElement('ul');
+            detailsList.innerHTML = `
+                <li><strong>Name:</strong> ${pet.name}</li>
+                <li><strong>Breed:</strong> ${pet.breed}</li>
+                <li><strong>Age:</strong> ${pet.age}</li>
+                <li><strong>Gender:</strong> ${pet.gender}</li>
+                <li><strong>Location:</strong> ${pet.location}</li>
+            `;
+            detailsDiv.appendChild(detailsList);
+
+            card.appendChild(imageDiv);
+            card.appendChild(detailsDiv);
+
+            cardContainer.appendChild(card);
+        }
+
+        // Call the function to create the card
+        createPetCard(petDetails);
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay</title>
+    <link rel="stylesheet" type="text/css" href="Stay.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+		<nav>
+			<div class="logo" id="logo">
+				Adopt<span>Me</span>
+			</div>
+			<div class="menu">
+				<a href="#">Pets</a>
+				<a href="#">Pet Services</a>
+				<a href="#">About Us</a>
+                <a href="#">Join us</a>
+				<a href="#">Contact</a>
+                <a href="#">FAQs</a>
+            </div>
+
+            <button id="open-popup" class="open-popup">Login</button>
+            
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                  <span class="close" id="close-popup">&times;</span>
+                  <h2 class="s2">Sign In</h2>
+                  <br>
+                  <form>
+                    <label for="username">Username:</label>
+                    <input type="email" id="username" name="username" required placeholder="Enter Your Username"><br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter Password"><br>
+                    <br>
+                    <br>
+                    <button type="submit" class="sub">Submit</button>
+                  </form>
+                </div>
+              </div>
+		</nav>
+	</header>
+    <div class="megacontainer">
+        <div class="container1">
+            <main>
+                <img src="staypic1.jpeg" class="slide" alt="">
+                <img src="staypic2.jpeg" class="slide" alt="">
+                <img src="staypic3.jpeg" class="slide" alt="">
+                <img src="staypic4.jpeg" class="slide" alt="">
+            </main>
+            <div class="nav">
+                <button onclick="goPrev()" class="prev">←</button>
+                <button onclick="goNext()" class="next">→</button>
+            </div>
+        </div>
+        <div class="container2">
+            <h1 class="text1">Whatever Shelter Care!</h1>
+            <br>
+            <hr>
+            <br>
+            <h3 class="text2"><span class="span1">Address</span> <br> <span class="span2">Plot 123, Street XYZ, Abc Area, City, PIN Code</span></h3>
+            <br>
+            <h3 class="text3"><span class="span1">Capacity</span> <br> <span class="span2">X Dogs, Y Cats</span></h3>
+            <br>
+            <h3 class="text4"><span class="span1">Facilities</span></h3>
+            <div class="facs">
+                <ul>
+                    <b>
+                    <li><span class="span3">One</span></li>
+                    <li><span class="span3">Two</span></li>
+                    <li><span class="span3">Three</span></li>
+                    </b>
+                </ul>
+            </div>
+            <br>
+            <br>
+            <button class="bbook" id="bookbutton">Book</button>
+        </div>
+    </div>
+
+
+
+
+    <footer class="footer">
+	    <div class="f-contact" data-aos="zoom-in-up" data-aos-offset="200">
+		    <div>
+                <p><span class="sseven">
+                    Connect with us for
+                    any queries or
+                    support.
+                </span>
+                <br>
+                    We are dedicated to provide you with a hassle free adoption
+                    proceess 24X7. Our only goal is to provide you with a pawsitive
+                    experience all the way.</p>
+			    <i class="fa fa-whatsapp"></i>
+			    <i class="fa fa-instagram"></i>
+			    <i class="fa fa-telegram"></i>
+			    <i class="fa fa-twitter"></i>
+		    </div>
+
+		    <div>
+			    <h1>Contact</h1>
+			    <p>adoptme@gmail.com</p>
+			    <p>+91 9876543210</p>
+			    <p>Buliding No 123, Street xyz, Mumbai</p>
+		    </div>
+
+		    <div>
+			    <h1>Get Involved</h1>
+			    <p>Adopting Pets</p>
+			    <p>Shelter and Rescues</p>
+			    <p>As a Veterinarian</p>
+			    <p>As a Trainer</p>
+			    <p>As a Breeder</p>
+		    </div>
+	    </div>
+    </footer>
+    <script>
+    document.getElementById("bookbutton").addEventListener("click", function () {
+        window.location.href = "Stayform.html";
+    });
+
+    document.getElementById("logo").addEventListener("click", function () {
+        window.location.href = "index.html";
+        });
+    </script>
+
+    
+    <script>
+        const slides = document.querySelectorAll(".slide")
+        var counter = 0;
+        slides.forEach(
+            (slide, index) => {
+                slide.style.left = `${index * 100}%`
+            }
+        )
+        const goPrev = () => {
+            counter--
+            slideImage()
+        }
+        const goNext = () => {
+            counter++
+            slideImage()
+        }
+        const slideImage = () => {
+            slides.forEach(
+                (slide) => {
+                    slide.style.transform = `translateX(-${counter * 100}%)`
+                }
+            )
+        }
+    </script>
+</body>
+</html>

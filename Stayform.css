@@ -1,0 +1,364 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(212, 235, 167);
+    margin: 0;
+    padding: 0;
+}
+
+.container9 {
+    max-width: 800px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 100px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+form {
+    margin-top: 20px;
+    padding-bottom: 60px; /* Add padding to the bottom to avoid overlap with the footer */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+select, input, textarea {
+    width: 70%;
+    padding: 10px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#thankYou {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    display: none;
+    color: #009900;
+}
+header{
+	width: 100vw;
+	height:auto;
+	background:white;
+	background-size: cover;
+	position: relative;
+	background-attachment: fixed;
+}
+nav{
+	width: 100%;
+	height:80px;
+	background: white;
+	color: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 80px;
+	position:fixed;
+	top:0;
+	background:white;
+	z-index: 1;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.logo{
+	font-family: sans-serif;
+	font-size:2.5em;
+    cursor: pointer;
+}
+.logo span{
+	color: #e74c3c;
+}
+.menu a{
+	text-decoration: none;
+	color: black;
+	font-size:20px;
+	
+	padding: 10px 20px;
+	font-family: sans-serif;
+
+}
+.menu a:first-child{
+	color:black;
+}
+.menu a:hover{
+	color: #e74c3c;
+	transition: 0.4s;
+}
+.icon i{
+	font-size:20px;
+}
+.icon i:hover{
+	color: #e74c3c;
+}
+.icon a{
+	padding:10px 20px;
+	background:#e74c3c;
+	color:white;
+	text-decoration: none;
+	margin-left:30px;
+	border-radius: 5px;  
+}
+.icon a:hover{
+	background: transparent;
+	border:1px solid #e74c3c;
+	color: black;
+	transition: 0.4s ease;
+}
+
+
+footer{
+	background: #262626;
+	color: white;
+	width: 96%;
+	padding: 25px 25px;
+	margin-top: 0px;
+    font-size: 20px;
+}
+.f-contact{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top:3em;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.f-contact>div{
+	margin: 50px;
+}
+.f-contact p{
+	line-height:2em;
+	font-size: 20px;
+	color: grey;	
+	cursor: pointer;
+}
+.f-contact p:hover{
+	color: white;
+}
+.f-contact i{
+	background: white;
+	color: black;
+	padding:10px;
+	font-size:16px;
+	margin: 20px 5px;
+	border-radius: 50%;
+	transition: .4s ease;
+}
+.f-contact i:hover{
+	background: transparent;
+	border:1px solid white;
+	color: white;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    width: 400px;
+	height: 350px;
+    padding: 20px;
+    margin: 10% auto;
+    position: relative;
+	border-radius: 6px;
+	font-size: 20px;
+  }
+  .popup-content input{
+	width: 350px;
+	height: 40px;
+	border: 1.5px solid black;
+  }
+  .popup-content input:hover{
+	border: 1.5px solid gray;
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+  }
+.open-popup{
+	width: 80px;
+	height: 40px;
+	background-color: #e74c3c;
+	color: white;
+	font-size: 15px;
+	border: none;
+	border-radius: 4px;
+    cursor: pointer;
+}
+.s2{
+	text-align: center;
+	font-size: 30px;
+}
+.sub{
+	width: 80px;
+	height: 40px;
+	background-color: green;
+	color: white;
+	font-size: 15px;
+	border: none;
+	border-radius: 4px;	
+	margin-left: 140px;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
+    z-index: 999;
+}
+form{
+    padding:20px;
+}
+div.mainf{
+    margin-top: 130px;
+    margin-left: 80px;
+    margin-bottom: 50px;
+    width: 1100px;
+    height: 80px;
+    box-shadow: 0 0 15px #262626;
+    border-radius: 6px;
+}
+.mainform{
+    display: flex;
+}
+.mainform select{
+    width: 260px;
+    height: 40px;
+    font-size: 20px;
+    border: 2px solid rgb(68, 68, 68);
+    border-radius: 4px;
+}
+.mainform select option{
+    padding: 25px;
+}
+.form-control{
+    margin-left: 25px;
+}
+.bmainf{
+    margin-left: 25px;
+    width: 310px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    font-size: 20px;
+    border: none;
+}
+.bmainf:hover{
+    background-color: #262626;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    width: 400px;
+	height: 350px;
+    padding: 20px;
+    margin: 10% auto;
+    position: relative;
+	border-radius: 6px;
+	font-size: 20px;
+  }
+  .popup-content input{
+	width: 350px;
+	height: 40px;
+	border: 1.5px solid black;
+  }
+  .popup-content input:hover{
+	border: 1.5px solid gray;
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+  }
+.open-popup{
+	width: 80px;
+	height: 40px;
+	background-color: #e74c3c;
+	color: white;
+	font-size: 15px;
+	border: none;
+	border-radius: 4px;
+}
+.s2{
+	text-align: center;
+	font-size: 30px;
+}
+.sub{
+	width: 80px;
+	height: 40px;
+	background-color: green;
+	color: white;
+	font-size: 15px;
+	border: none;
+	border-radius: 4px;	
+	margin-left: 140px;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
+    z-index: 999;
+}
+button.submitform{
+    width: 100px;
+    height: 45px;
+    background-color: #009900;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    margin-left: 200px;
+}
+button.submitform:hover{
+    background-color: #016e01;
+    box-shadow: 0 0 10px black;
+}
